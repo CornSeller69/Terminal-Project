@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Text Adventure (Pasje Jam)</title>
+    <script src="assets/pasje.js"></script>
+    <link rel="stylesheet" href="assets/pasje.css">
+</head>
+<body>
+    <div id="nagl"><h2 style="padding-left: 20px; text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);">Moją pasją jest tworzenie prostych gierek w HTML5. Zazwyczaj są  to projekty inspirowane innymi. W takim razie ta stronka to prosty <i>text adventure</i>. Zapraszam...</h2></div>
+    <div id="pregra" class="gry" style="visibility: visible; z-index: 2; opacity: 1; transition: opacity 300ms;">
+        <button id="bigassbutton" onclick="loadStuff()">GRAJ</button>
+        <p style="text-align: center; color: rgb(0, 255, 0); margin-top: 100px;">(Przycisk poniżej wymagany jest do załadowania paru dodatkowych rzeczy, poprostu go kliknij!)</p>
+    </div>
+    <div id="gra1" class="gry" style="visibility: visible;">
+        <p>POŁĄCZONO Z SIECIĄ BOREAS RESEARCH. Copyright 2001-2025 All rights reserved.</p>
+        <p>Ze względu na ostatnie problemy z niechcianym dostępem do plików, każdy odwiedzający musi się zalogować!</p>
+        <br><p>Login: <input type="text" id="login"></p>
+        <p>Hasło: <input type="password" id="haslo"></p>
+        <button onclick="tryLogin()">OK!</button><br><br>
+        <button onclick="hacking()">Nowe hasło</button>
+    </div>
+    <div id="gra2" class="gry">
+        <p>Dostęp techniczny: Kliknij złącz gdy część wymaganego szyfru pojawi się na ekranie. Zdobądź cały szyfr, aby otrzymać dane konta technicznego.</p>
+        <div id="codes">
+            <p id="c1">4X1F</p><p id="c2">K001</p><p id="c3">79J5</p>
+            <p id="c4">01HZ</p><p id="c5">34F2</p><p id="c6">7A08</p>
+            <p id="c7">0ZV7</p><p id="c8">N0WR</p><p id="c9">BLJ6</p>
+        </div>
+        <div id="szyfro"><p>Szyfr: </p><p id="s1">N0WR</p><p id="s2">01HZ</p><p id="s3">7A08</p><p id="s4">K001</p></div>
+        <button id="zlaczb" onclick="zlacz_mg()">Złącz...</button>
+    </div>
+</body>
+</html>

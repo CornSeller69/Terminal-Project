@@ -1,0 +1,128 @@
+body {
+    background-color: rgb(0, 5, 0);
+    color: white;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+#bigassbutton {
+    position: absolute;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    width: 70%;
+    background-color: rgb(0, 5, 0);
+    color: rgb(0, 255, 0);
+    height: 35%;
+    text-align: center;
+    font-size: 130px;
+    top: 30%;
+    font-family: monospace;
+    border: 3px solid rgb(0, 255, 0);
+}
+
+#bigassbutton:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 5, 0);
+    border: 3px solid rgb(0, 5, 0);
+    cursor: pointer;
+}
+
+#nagl,.gry {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 99%;
+    border: 5px double white;
+}
+#nagl {
+    top: 0;
+    height: 10%;
+}
+.gry {
+    visibility: hidden;
+    bottom: 0;
+    height: 87%;
+    background-color: rgb(0, 5, 0); /* linie ekranu w tej samej barwie */
+    padding-bottom: 5px;
+}
+
+.gry p {
+    color: rgb(0, 255, 0);
+    padding-left: 30px; padding-right: 30px;
+    font-size: 20px;
+}
+
+.gry input {
+    background-color: rgb(0, 5, 0);
+    border: none;
+    border-bottom: 3px solid rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
+    font-family: monospace;
+    font-size: 17px;
+    width: 16%;
+}
+.gry input:focus {
+    outline: none;
+    /* Jest to po to, aby nie pojawiał się ten niebieski outline podczas kliknięcia na input. */
+}
+
+.gry button {
+    width: 20%;
+    background-color: rgb(0, 5, 0);
+    color: rgb(0, 255, 0);
+    height: 10%;
+    margin-left: 30px;
+    text-align: left;
+    font-size: 50px;
+    font-family: monospace;
+    border: 3px solid rgb(0, 255, 0);
+}
+.gry button:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 5, 0);
+    border: 3px solid rgb(0, 5, 0);
+    cursor: pointer;
+}
+
+/* PONIŻEJ WPISUJ WYSOKOŚCI .gry !!! */
+#gra1 {z-index: 1;}
+#gra2 {z-index: 2;}
+
+#gra2 #codes {
+    display: flex;
+    position: absolute;
+    left: 3%;
+    /*margin-inline: auto; */
+    top: 15%;
+    border: 3px solid rgb(0, 255, 0);
+    width: 50%;
+    height: 80%;
+    justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+#codes p {
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#szyfro {
+    text-align: center;
+    align-self: center;
+    float: right;
+    margin-right: 10%;
+}
+
+#szyfro p {
+    font-size: 30px;
+}
+
+#zlaczb {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+}
