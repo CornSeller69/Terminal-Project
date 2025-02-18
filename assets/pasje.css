@@ -88,7 +88,7 @@ body {
 
 /* PONIŻEJ WPISUJ WYSOKOŚCI .gry !!! */
 #gra1 {z-index: 1;}
-#gra2 {z-index: 2;}
+#gra2,#gra3 {z-index: 2;}
 
 #gra2 #codes {
     display: flex;
@@ -125,4 +125,34 @@ body {
     position: absolute;
     right: 5%;
     bottom: 20px;
+}
+
+#okienko-gra2 {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    bottom: 40%;
+    background-color: rgb(0, 5, 0);
+    border: 3px solid rgb(0, 255, 0);
+    width: 50%;
+    height: 350px;
+    visibility: hidden;
+}
+
+#og2p {
+    color: rgb(0, 255, 0);
+    text-align: center;
+}
+
+#og2b {
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    text-align: center;
 }

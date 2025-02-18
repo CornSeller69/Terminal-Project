@@ -8,6 +8,10 @@ t_ost.loop = true;
 let ccv = "";
 let cyph_stage = 0;
 
+// losowo generowane hasło z każdą grą:
+let mainPass = Math.floor(10000 + Math.random() * 90000);
+let passDebug = 0;
+
 // keypress shit
 document.addEventListener("DOMContentLoaded", function() {
      const inputs = document.querySelectorAll("input");
@@ -34,16 +38,30 @@ function loadStuff() {
      document.getElementById("pregra").style.opacity = 0;
      setTimeout(function() {document.getElementById("pregra").style.visibility = "hidden";}, 300);
      t_ost.play();
+     document.getElementById("login").value = "";
+     document.getElementById("haslo").value = "";
 }
 
 function tryLogin() {
-     if (document.getElementById("login").value == "temp3" && document.getElementById("haslo").value == "1375001") {
-
-     } else {
+     if(passDebug == 3) {
+          console.warn(mainPass);
           t_error.currentTime = 0; // just in case
           t_error.play();
-          document.getElementById("login") = "Błędny login lub hasło!";
-          document.getElementById("haslo") = "";
+          document.getElementById("login").value = "Błędny login lub hasło!";
+          document.getElementById("haslo").value = "";
+          passDebug = 4;
+     } else {
+          if (document.getElementById("login").value == "temp3" && document.getElementById("haslo").value == mainPass) {
+               t_yes.currentTime = 0;
+               t_yes.play();
+               document.getElementById("gra3").style.visibility = 'visible';
+          } else {
+               t_error.currentTime = 0; // just in case
+               t_error.play();
+               document.getElementById("login").value = "Błędny login lub hasło!";
+               document.getElementById("haslo").value = "";
+               passDebug++;
+          }
      }
 }
 
@@ -140,10 +158,22 @@ function zlacz_mg() {
                      console.log("etap4"); t_yes.play();
                      d.style.backgroundColor = "rgb(0, 255, 0)";
                     d.style.color = "rgb(0, 5, 0)";
+                    cypherGivePass();
                } else {
                     t_error.currentTime = 0; t_error.play();
                     cypherFail();
                }
                break;
      }
+     function cypherGivePass() {
+          doHackCycle = false;
+          document.getElementById("okienko-gra2").style.visibility = 'visible';
+          document.getElementById("og2p").innerHTML = "Login: temp3  |  Hasło: " + mainPass;
+     }
+}
+
+function close_gra2() {
+     t_load.play();
+     setTimeout(function() {t_load.pause(); t_load.currentTime = 0;}, 2500);
+     setTimeout(function() {document.getElementById("gra2").style.visibility = 'hidden'; document.getElementById("okienko-gra2").style.visibility = 'hidden';}, 990);
 }
