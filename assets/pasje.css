@@ -88,7 +88,7 @@ body {
 
 /* PONIŻEJ WPISUJ WYSOKOŚCI .gry !!! */
 #gra1 {z-index: 1;}
-#gra2,#gra3 {z-index: 2;}
+#gra2,#gra3,#gra4,#gra5,#gra6 {z-index: 2;}
 
 #gra2 #codes {
     display: flex;
@@ -155,4 +155,84 @@ body {
     right: 0;
     bottom: 3px;
     text-align: center;
+}
+
+#mel-progress {
+border: 3px solid rgb(0, 255, 0);
+position: absolute;
+margin-inline: auto;
+left: 0;
+right: 0;
+bottom: 5px;
+width: 80%;
+height: 50px;
+}
+
+#mel-progress #mel-bar {
+    background-color: rgb(0, 255, 0);
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    left: 0;
+}
+
+#playbutton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin-inline: auto;
+    width: 40%;
+    text-align: center;
+}
+
+#melb1,#melb2,#melb3 {
+    width: 30%;
+    position: absolute;
+    top: 44%;
+}
+
+#melb1 {
+    left: 1%;
+}
+#melb2 {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+#melb3 {
+    right: 1%;
+}
+
+input[type='radio'] {
+    transform: scale(2);
+}
+input {
+    font-size: 30px;
+    color: rgb(0, 255, 0);
+}
+
+select, option {
+    background-color: rgb(0, 5, 0);
+    color: rgb(0, 255, 0);
+    border: 3px solid rgb(0, 255, 0);
+    position: absolute;
+    left: 50px;
+    bottom: 40%;
+    font-size: 30px;
+
+}
+
+select:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 5, 0);
+    border: 3px solid rgb(0, 5, 0);
+    cursor: alias;
+}
+
+h3 {
+    transition: left,right 10s ease-in-out;
+    margin-inline: auto;
+    position: absolute;
+    bottom: 10%;
 }

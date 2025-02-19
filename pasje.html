@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/pasje.css">
 </head>
 <body>
-    <div id="nagl"><h2 style="padding-left: 20px; text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);">Moją pasją jest tworzenie prostych gierek w HTML5. Zazwyczaj są  to projekty inspirowane innymi. W takim razie ta stronka to prosty <i>text adventure</i>. Zapraszam...</h2></div>
+    <div id="nagl"><h2 style="padding-left: 20px; text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);">Moją pasją jest tworzenie prostych gierek w HTML5. Zazwyczaj są  to projekty inspirowane innymi. W takim razie ta stronka to prosty <i>projekcik inspirowany terminalem z Fallouta</i>. Zapraszam...</h2></div>
     <div id="pregra" class="gry" style="visibility: visible; z-index: 2; opacity: 1; transition: opacity 300ms;">
         <button id="bigassbutton" onclick="loadStuff()">GRAJ</button>
         <p style="text-align: center; color: rgb(0, 255, 0); margin-top: 100px;">(Przycisk poniżej wymagany jest do załadowania paru dodatkowych rzeczy, poprostu go kliknij!)</p>
@@ -35,8 +35,41 @@
         <div id="szyfro"><p>Szyfr: </p><p id="s1">N0WR</p><p id="s2">01HZ</p><p id="s3">7A08</p><p id="s4">K001</p></div>
         <button id="zlaczb" onclick="zlacz_mg()">Złącz...</button>
     </div>
-    <div id="gra3">
-        
+    <div id="gra3" class="gry">
+        <p>POŁĄCZONO Z SIECIĄ BOREAS RESEARCH. Copyright 2001-2025 All rights reserved.</p>
+        <p>Dziękujemy za przystąpienie. Przeprowadzimy teraz serię testów.</p>
+        <p>Test 1: Zrekreuj melodię... Wciśnij 5 razy przyciski w porawnej sekwencji, następnie zatwierdź losowym przyciskiem.</p>
+        <button id="playbutton" onclick="playMelody()">Odtwórz melodię</button>
+        <button id="melb1" onclick="melodyButton(1)">1</button><button id="melb2" onclick="melodyButton(2)">2</button><button id="melb3" onclick="melodyButton(3)">3</button>
+        <div id="mel-progress"><div id="mel-bar"></div></div>
+    </div>
+    <div id="gra4" class="gry">
+        <p>BOREAS SURVEY PROGRAM</p>
+        <p>Ta część sprawdzeń obejmuje krótki quiz. Prosimy o jego szczere wypełnienie.</p>
+        <br><p>1. Autobus linii 14 z ul. Kościuszki do Pl. Rapackiego dojedzie w około...</p>
+        <input type="radio" name="r1" id="r11">5 minut</input><input type="radio" radio name="r1" id="r12">od 15 do 25 minut jako iż Aleja Solidarności zawsze jest zakorkowana.</input><input id="r13" type="radio" name="r1">10 minut</input>
+        <p>2. Czy włożenie do aktywnego gniazdka widelca to dobry pomysł?</p>
+        <input type="radio" name="r2" id="r21">Tak</input><input id="r22" type="radio" name="r2">Nie</input><input id="r23" type="radio" name="r2">Wspaniały</input>
+        <p>3. Mgła nadchodzi.</p>
+        <input type="radio" name="r3" id="r31">Mgła nadchodzi.</input><input id="r32" type="radio" name="r3">Mgła nadchodzi.</input><input type="radio" name="r3" id="r33">Mgła nadchodzi.</input>
+        <br><br><button onclick="submitSurvey()" style="width: 40%;">Prześlij ankietę!</button>
+        <p style="float: left; bottom: 0; position: absolute;">Twoje wybory są anonimowe (chyba, w sumie to nie wiem), ale użyjemy ich do personalizacji.</p>
+    </div>
+    <div id="gra5" class="gry">
+        <p>POŁĄCZONO Z SIECIĄ BOREAS RESEARCH. Copyright 2001-2025 All rights reserved.</p>
+        <p>Jako ostatni test, poprostu wybierz z menu pole do którego powinna przesunąć się czarna wieża, aby nie móc być zbitą.</p>
+        <img src="assets/chess.png" alt="Błąd, przeładuj stronę!" style="margin-left: 10px;">
+        <select id="selekt">
+            <option onclick="chosenChess(1)">W górę!</option>
+            <option onclick="chosenChess(2)">W dół!</option>
+            <option onclick="chosenChess(3)">W lewo!</option>
+        </select>
+    </div>
+    <div id="gra6" class="gry">
+        <p style="font-size: 70px;">BOREAS RESEARCH</p>
+        <p>Dziękujemy za wypełnienie strony. Widzimy się w przyszłości pod kontaktem firmowym.</p><br><br>
+        <button onclick="document.getElementById('gra6').style.visibility = 'hidden';">Wyloguj się</button>
+        <h3 id="hat">BOREAS RESEARCH</h3>
     </div>
 </body>
 </html>
